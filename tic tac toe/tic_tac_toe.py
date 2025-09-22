@@ -1,4 +1,4 @@
-# Tic-Tac-Toe: Step 1 (using 9 variables, loops for moves, no lists for symbols or player names)
+# Tic-Tac-Toe: Step 1 
 
 a1 = "."                                
 a2 = "."
@@ -16,7 +16,7 @@ print(c1, c2, c3)
 
 move_count = 0
 while move_count < 9:
-    # Set symbol and player name without lists
+    
     if move_count % 2 == 0:
         symbol = "O"
         player = "Player 1"
