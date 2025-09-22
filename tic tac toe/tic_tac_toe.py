@@ -24,7 +24,7 @@ while move_count < 9:
         symbol = "X"
         player = "Player 2"
     valid_move = False
-    while not valid_move:
+    while valid_move==False:
         move_row = input(player + ":Enter move - row number from {{1, 2, 3}}: ")
         move_column = input(player + ":Enter move - column number from {{1, 2, 3}}: ")
         if move_row == "1" and move_column == "1":
