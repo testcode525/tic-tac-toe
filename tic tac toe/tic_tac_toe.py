@@ -25,8 +25,8 @@ while move_count < 9:
         player = "Player 2"
     valid_move = False
     while not valid_move:
-        move_row = input(player+":","Enter move - row number from {{1, 2, 3}}: ")
-        move_column = input(player+":","Enter move - column number from {{1, 2, 3}}: ")
+        move_row = input(player + ":Enter move - row number from {{1, 2, 3}}: ")
+        move_column = input(player + ":Enter move - column number from {{1, 2, 3}}: ")
         if move_row == "1" and move_column == "1":
             if a1 == ".":
                 a1 = symbol
@@ -113,3 +113,30 @@ while move_count < 9:
         print("Player 1 wins!" if a3 == "X" else "Player 2 wins!")
         break
     move_count += 1
+    if move_count==9:
+        if a1 == a2 == a3 and a1 != ".":
+        
+            break
+        if b1 == b2 == b3 and b1 != ".":
+        
+            break
+        if c1 == c2 == c3 and c1 != ".":
+       
+            break
+        if a1 == b1 == c1 and a1 != ".":
+        
+            break
+        if a2 == b2 == c2 and a2 != ".":
+        
+            break
+        if a3 == b3 == c3 and a3 != ".":
+        
+            break
+        if a1 == b2 == c3 and a1 != ".":
+        
+            break
+        if a3 == b2 == c1 and a3 != ".":
+        
+            break
+        else :
+            print("Its a draw")
