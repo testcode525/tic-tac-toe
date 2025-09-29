@@ -1,4 +1,4 @@
-# Tic-Tac-Toe: Step 1 
+# Tic-Tac-Toe:
 
 a1 = "."                                
 a2 = "."
@@ -10,6 +10,8 @@ c1 = "."
 c2 = "."
 c3 = "."
 
+# Input Board 
+
 print("  _1___2___3_")
 print("1|", a1 ,"|", a2, "|", a3 ,"|")
 print("  -----------")
@@ -19,6 +21,7 @@ print("3|", c1 ,"|", c2 ,"|", c3 ,"|")
 print("  ___________")
 
 
+# Check for invalid moves and already taken cells
 
 move_count = 0
 while move_count < 9:
@@ -31,8 +34,8 @@ while move_count < 9:
         player = "Player 2"
     valid_move = False
     while valid_move==False:
-        move_row = input(player + ":Enter move - row number from {{1, 2, 3}}: ")
-        move_column = input(player + ":Enter move - column number from {{1, 2, 3}}: ")
+        move_row = input(player + ":Enter row {{1, 2, 3}}: ")
+        move_column = input(player + ":Enter column {{1, 2, 3}}: ")
         if move_row == "1" and move_column == "1":
             if a1 == ".":
                 a1 = symbol
@@ -88,7 +91,7 @@ while move_count < 9:
             else:
                 print("Cell already taken")
         else:
-            print("Invalid move")
+            print("Please enter number between 1 and 3")
     print()
     print("  _1___2___3_")
     print("1|", a1 ,"|", a2, "|", a3 ,"|")
@@ -100,6 +103,7 @@ while move_count < 9:
 
 
     # Win check after every move
+    
     if a1 == a2 == a3 and a1 != ".":
         print("Player 1 wins!" if a1 == "O" else "Player 2 wins!")
         break
